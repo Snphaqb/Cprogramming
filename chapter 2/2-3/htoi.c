@@ -1,13 +1,5 @@
 #include<stdio.h>
-int pow2(int a, int b){
-    if(b == 0)
-        return 1;	    
-    int res = a;
-    for(int i=1;i<b;i++){
-        res *= a;
-    }
-    return res;
-}
+
 int hexToDec(char c){
     if( c >= '0' && c <= '9')
         return c - '0';
