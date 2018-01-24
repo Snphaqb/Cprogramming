@@ -23,12 +23,9 @@ int htoi2(char *s){
 	  s++;
     if(*s == 'x' || *s == 'X')
 	  s++;
-    char * temp = s;
-    while(*s++);// move to the end of the string (plus one)
-    s -= 2; // go back to the char before '\0'
-    int length = s - temp; // length of the number - 1 
-    for(int i=0;i<=length;i++){
-    	res += hexToDec(*s--) * pow2(16,i);
+    while(*s){
+        res *= 16;
+    	res += hexToDec(*s++);
     }
     return res;
 }
